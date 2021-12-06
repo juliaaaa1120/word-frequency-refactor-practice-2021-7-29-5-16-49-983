@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class WordFrequencyGame {
 
     private static final String SPACE_PATTERN = "\\s+";
+    public static final String LINEBREAK_PATTERN = "\n";
 
     public String getResult(String inputStr) {
 
@@ -25,7 +26,7 @@ public class WordFrequencyGame {
 
                 wordInfoList.sort((word1, word2) -> word2.getWordCount() - word1.getWordCount());
 
-                StringJoiner joiner = new StringJoiner("\n");
+                StringJoiner joiner = new StringJoiner(LINEBREAK_PATTERN);
                 for (WordInfo w : wordInfoList) {
                     String s = w.getValue() + " " + w.getWordCount();
                     joiner.add(s);
