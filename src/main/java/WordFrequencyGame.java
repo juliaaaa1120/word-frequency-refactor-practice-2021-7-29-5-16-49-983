@@ -15,28 +15,22 @@ public class WordFrequencyGame {
 
     public String getResult(String inputStr) {
 
+        try {
 
-        if (inputStr.split(SPACE_PATTERN).length == 1) {
-            return inputStr + " 1";
-        } else {
+            List<WordInfo> wordInfoList = calculateWordFrequency(inputStr);
 
-            try {
+            wordInfoList.sort((word1, word2) -> word2.getWordCount() - word1.getWordCount());
 
-                List<WordInfo> wordInfoList = calculateWordFrequency(inputStr);
-
-                wordInfoList.sort((word1, word2) -> word2.getWordCount() - word1.getWordCount());
-
-                StringJoiner joiner = new StringJoiner(LINEBREAK_PATTERN);
-                for (WordInfo wordInfo : wordInfoList) {
-                    String s = wordInfo.getValue() + " " + wordInfo.getWordCount();
-                    joiner.add(s);
-                }
-                return joiner.toString();
-            } catch (Exception e) {
-
-
-                return "Calculate Error";
+            StringJoiner joiner = new StringJoiner(LINEBREAK_PATTERN);
+            for (WordInfo wordInfo : wordInfoList) {
+                String s = wordInfo.getValue() + " " + wordInfo.getWordCount();
+                joiner.add(s);
             }
+            return joiner.toString();
+        } catch (Exception e) {
+
+
+            return "Calculate Error";
         }
     }
 
