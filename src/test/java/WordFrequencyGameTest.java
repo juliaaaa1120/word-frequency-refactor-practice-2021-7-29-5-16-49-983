@@ -53,6 +53,14 @@ public class WordFrequencyGameTest {
         validate_input_string_process_to_expected_result(inputStr, expectResult);
     }
 
+    @Test
+    public void should_return_calculate_error_when_input_null() throws Exception {
+        //Given
+        String inputStr = null;
+        String expectResult = "Calculate Error";
+        validate_input_string_process_to_expected_result(inputStr, expectResult);
+    }
+
     private void validate_input_string_process_to_expected_result(String inputStr, String expectResult) {
         WordFrequencyGame wordFrequencyGame = new WordFrequencyGame();
         //When
