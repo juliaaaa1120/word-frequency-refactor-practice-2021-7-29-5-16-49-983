@@ -3,9 +3,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringJoiner;
-import java.io.CharArrayWriter;
 
-import java.time.LocalDateTime;
+// naming
+// magic string
+// temp var
+// for loop
+// long method
+// if / else
 
 public class WordFrequencyGame {
     public String getResult(String inputStr) {
@@ -18,10 +22,10 @@ public class WordFrequencyGame {
             try {
 
                 //split the input string with 1 to n pieces of spaces
-                String[] arr = inputStr.split("\\s+");
+                String[] words = inputStr.split("\\s+");
 
                 List<Input> inputList = new ArrayList<>();
-                for (String s : arr) {
+                for (String s : words) {
                     Input input = new Input(s, 1);
                     inputList.add(input);
                 }
