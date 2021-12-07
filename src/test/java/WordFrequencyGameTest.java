@@ -38,7 +38,7 @@ public class WordFrequencyGameTest {
     }
 
     @Test
-    public void should_process_two_same_words_with_sorted() throws Exception {
+    public void should_return_the_2_is_1_when_get_result_given_input_the_the_is_with_sorted() throws Exception {
         //Given
         String inputStr = "the the is";
         String expectResult = "the 2\nis 1";
