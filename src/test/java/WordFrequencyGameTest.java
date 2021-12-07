@@ -64,8 +64,8 @@ public class WordFrequencyGameTest {
     private void validate_input_string_process_to_expected_result(String inputStr, String expectResult) {
         WordFrequencyGame wordFrequencyGame = new WordFrequencyGame();
         //When
-        String result = wordFrequencyGame.getResult(inputStr);
+        String actualResult = wordFrequencyGame.getResult(inputStr);
         //Then
-        assertThat(result).isEqualTo(expectResult);
+        assertThat(actualResult).isEqualTo(expectResult);
     }
 }
