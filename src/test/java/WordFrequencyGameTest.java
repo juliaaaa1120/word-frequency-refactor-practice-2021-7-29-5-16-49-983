@@ -54,7 +54,7 @@ public class WordFrequencyGameTest {
     }
 
     @Test
-    public void should_return_calculate_error_when_input_null() throws Exception {
+    public void should_return_calculate_error_when_get_result_given_input_null() throws Exception {
         //Given
         String inputStr = null;
         String expectResult = "Calculate Error";
