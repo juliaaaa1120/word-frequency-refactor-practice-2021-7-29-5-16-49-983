@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 // if / else
 
 public class WordFrequencyGame {
-
     private static final String SPACE_PATTERN = "\\s+";
     public static final String LINEBREAK_PATTERN = "\n";
+    public static final String ERROR_MESSAGE = "Calculate Error";
 
     public String getResult(String inputStr) {
 
@@ -30,7 +30,7 @@ public class WordFrequencyGame {
         } catch (Exception e) {
 
 
-            return "Calculate Error";
+            return ERROR_MESSAGE;
         }
     }
 
