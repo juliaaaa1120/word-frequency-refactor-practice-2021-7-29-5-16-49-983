@@ -14,18 +14,11 @@ public class WordFrequencyGame {
     public static final String ERROR_MESSAGE = "Calculate Error";
 
     public String getResult(String inputStr) {
-
         try {
-
             List<WordInfo> wordInfoList = calculateWordFrequency(inputStr);
-
             wordInfoList.sort(Comparator.comparing(WordInfo::getWordCount).reversed());
-
             return generateStringResult(wordInfoList);
-
         } catch (Exception e) {
-
-
             return ERROR_MESSAGE;
         }
     }
