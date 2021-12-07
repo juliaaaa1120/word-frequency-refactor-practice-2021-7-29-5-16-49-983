@@ -10,7 +10,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the";
         String expectResult = "the 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the is";
         String expectResult = "the 1\nis 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the      is";
         String expectResult = "the 1\nis 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the   \n   is";
         String expectResult = "the 1\nis 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the the is";
         String expectResult = "the 2\nis 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = "the is is";
         String expectResult = "is 2\nthe 1";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
     @Test
@@ -58,10 +58,10 @@ public class WordFrequencyGameTest {
         //Given
         String inputStr = null;
         String expectResult = "Calculate Error";
-        validate_input_string_process_to_expected_result(inputStr, expectResult);
+        validate_input_string_process_to_expected_string(inputStr, expectResult);
     }
 
-    private void validate_input_string_process_to_expected_result(String inputStr, String expectResult) {
+    private void validate_input_string_process_to_expected_string(String inputStr, String expectResult) {
         WordFrequencyGame wordFrequencyGame = new WordFrequencyGame();
         //When
         String actualResult = wordFrequencyGame.getResult(inputStr);
