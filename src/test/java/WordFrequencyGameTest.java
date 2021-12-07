@@ -30,7 +30,7 @@ public class WordFrequencyGameTest {
     }
 
     @Test
-    public void should_process_two_words_with_special_enter() throws Exception {
+    public void should_return_the_1_is_1_when_get_result_given_input_the_is_with_special_enter() throws Exception {
         //Given
         String inputStr = "the   \n   is";
         String expectResult = "the 1\nis 1";
