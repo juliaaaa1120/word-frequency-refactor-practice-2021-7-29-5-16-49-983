@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class WordFrequencyGameTest {
 
     @Test
-    public void should_return_the_1_when_input_the() throws Exception {
+    public void should_return_the_1_when_get_result_given_input_the() throws Exception {
         //Given
         String inputStr = "the";
         String expectResult = "the 1";
@@ -14,7 +14,7 @@ public class WordFrequencyGameTest {
     }
 
     @Test
-    public void should_process_two_words() throws Exception {
+    public void should_return_the_1_is_1_when_get_result_given_input_the_is() throws Exception {
         //Given
         String inputStr = "the is";
         String expectResult = "the 1\nis 1";
