@@ -46,7 +46,7 @@ public class WordFrequencyGameTest {
     }
 
     @Test
-    public void should_process_sorted_with_count_descending() throws Exception {
+    public void should_return_is_2_the_1_when_get_result_given_input_the_is_is_sorted_with_count_descending() throws Exception {
         //Given
         String inputStr = "the is is";
         String expectResult = "is 2\nthe 1";
